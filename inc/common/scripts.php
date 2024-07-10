@@ -1,22 +1,4 @@
 <?php
-function techub_theme_support() {
-    /** thumbnail */
-    add_theme_support( 'post-thumbnails' );
-    /** automatic feed Link */
-    add_theme_support( 'automatic-feed-links' );
-    /** title tag */
-    add_theme_support( 'title-tag' );
-    /** HTML5 Support */
-    add_theme_support('html5', array('comment-list', 'comment-form', 'search-form', 'gallery', 'caption', 'style', 'script'));
-    /** refresh Widget */
-    add_theme_support('customize-selective-refresh-widgets');
-
-    /** Post Format */
-    add_theme_support('post-formats', array('image', 'video', 'audio', 'gallery', 'quote', 'link'));
-
-
-};
-add_action( 'after_setup_theme', 'techub_theme_support' );
 
 function add_theme_scripts() {
     wp_enqueue_style( 'animate', get_template_directory_uri() . "/assets/css/animate.css", array(),'1.0', 'all' );

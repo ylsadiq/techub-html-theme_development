@@ -2,9 +2,11 @@
    <div class="search-popup">
         <button class="close-search style-two"><span class="flaticon-multiply"><i class="far fa-times-circle"></i></span></button>
         <button class="close-search"><i class="fa-light fa-arrow-up"></i></button>
-        <form method="post" action="#">
+        <form action="/" method="post">
             <div class="form-group">
-                <input type="search" name="search-field" value="" placeholder="Search Here" required="">
+                <input name="s" type="search" value="<?php the_search_query(  ); ?>" 
+                placeholder="<?php echo esc_attr__( 'search here...', 'techub' ); ?>" 
+                required="">
                 <button type="submit"><i class="fal fa-search"></i></button>
             </div>
         </form>
