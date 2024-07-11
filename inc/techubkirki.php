@@ -283,3 +283,36 @@ function techub_header_logo_section(){
 
 }
 techub_header_logo_section();
+// techub footer logo section
+function techub_footer_section(){
+    new \Kirki\Section(
+        'techub_footer_section',
+        [
+            'title'       => esc_html__( 'Footer', 'techub' ),
+            'description' => esc_html__( 'My footer Section Description.', 'techub' ),
+            'panel'       => 'techub_panel',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Image(
+        [
+            'settings'    => 'footer_bg_img',
+            'label'       => esc_html__( 'footer background Image', 'techub' ),
+            'description' => esc_html__( 'Please set your footer background image', 'techub' ),
+            'section'     => 'techub_footer_section',
+        ]
+    );
+
+	new \Kirki\Field\Text(
+		[
+			'settings' => 'footer_copyright',
+			'label'    => esc_html__( 'Pinterest URL', 'techub' ),
+			'section'  => 'techub_footer_section',
+			'default'  => esc_html__( 'Full Copyright & Design By Theme pure – 2024', 'techub' ),
+			'priority' => 10,
+		]
+	);
+
+}
+techub_footer_section();

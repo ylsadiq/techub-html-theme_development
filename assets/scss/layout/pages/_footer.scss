@@ -124,7 +124,6 @@
         margin-bottom: 18px;
     }
     &-widget-content-input {
-        & form {
             position: relative;
             & input {
                 color: var(--tp-common-white);
@@ -145,7 +144,6 @@
                     font-family: var(--tp-ff-heading);
                 }
             }
-        }
         &-2 {
             & input {
                 border: none;
@@ -349,14 +347,12 @@
             }
         }
         &-input {
-            & form {
-                & input {
-                    border: none;
-                    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
-                    background: var(--tp-common-white) !important;
-                    color: var(--tp-heading-secondary);
-                    padding-right: 60px;
-                }
+            & input {
+                border: none;
+                box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+                background: var(--tp-common-white) !important;
+                color: var(--tp-heading-secondary);
+                padding-right: 60px;
             }
         }
         &-email {

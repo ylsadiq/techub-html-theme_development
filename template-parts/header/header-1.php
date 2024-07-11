@@ -77,20 +77,22 @@ $menu_col = $header_right_side_switch == true ? '6' : '10 text-center';
                                 </nav>
                             </div>
                         </div>
-                        <?php if(!empty($header_right_side_switch)) : ?>
+    
                         <div class="col-xl-4 col-lg-8 col-md-8 col-6">
                             <div class="tp-header-right d-flex justify-content-end align-items-center">
-
+                            <?php if(!empty($header_right_side_switch)) : ?>
                                 <!-- header search button -->
                                 <div class="tp-header-search search-box-outer d-none d-md-block">
                                     <button><i class="flaticon-search"></i></button>
                                 </div>
-
+                                <?php endif; ?>
+                                <?php if(!empty($header_right_side_switch)) : ?>
                                 <!-- header button -->
                                  <?php if(!empty($header_button_text)) : ?>
                                 <div class="tp-header-button d-none d-lg-block">
                                     <a class="tp-header-btn" rel="noreferrer" href="<?php echo esc_url($header_button_url); ?>" target="_blank"><span><?php echo esc_html($header_button_text); ?></span></a>
                                 </div>
+                                <?php endif; ?>
                                 <?php endif; ?>
                                 <!-- header mobile menu ber -->
                                 <div class="tp-header-menu-ber">
@@ -99,7 +101,7 @@ $menu_col = $header_right_side_switch == true ? '6' : '10 text-center';
 
                             </div>
                         </div>
-                        <?php endif; ?>
+                  
                     </div>
                 </div>
             </div>
