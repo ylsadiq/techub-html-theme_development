@@ -12,7 +12,6 @@ $header_topbar_switch = get_theme_mod('header_topbar_switch', false);
 $menu_col = $header_right_side_switch == true ? '6' : '10 text-center';
 ?>
 
-
     <!-- header area start -->
     <header class="tp-header-height">
         <?php if(!empty($header_topbar_switch)) : ?>

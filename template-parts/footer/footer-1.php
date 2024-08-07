@@ -1,6 +1,6 @@
 <?php
     $footer_bg_img = get_theme_mod('footer_bg_img');
-    echo $footer_bg_img; 
+    // echo $footer_bg_img; 
 ?>
 
  <!-- Footer area start -->
