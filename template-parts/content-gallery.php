@@ -1,22 +1,17 @@
+<?php
+    $post_format_gallery = function_exists('get_field') ? get_field('post_format_gallery') : '';
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('tp-postbox-item mb-50'); ?>>
-    <?php if (has_post_thumbnail()) : ?>
-        <div class="swiper tp-faq-slide pb-30 fix">
+    <?php if (!empty($post_format_gallery)) : ?>
+        <div class="swiper tp-post-slider fix">
             <div class="swiper-wrapper">
+                <?php foreach ($post_format_gallery as $item) : ?>
                 <div class="swiper-slide">
                     <div class="tp-postbox-thumb p-relative">
-                            <?php the_post_thumbnail(); ?>
+                        <img src="<?php echo esc_url($item['url']); ?>" alt="<?php echo esc_attr($item['alt']); ?>">
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="tp-postbox-thumb p-relative">
-                            <?php the_post_thumbnail(); ?>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="tp-postbox-thumb p-relative">
-                            <?php the_post_thumbnail(); ?>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     <?php endif; ?>
