@@ -30,6 +30,18 @@ add_action( 'after_setup_theme', 'techub_theme_support' );
 function techub_widgets_init() {
 
 	register_sidebar( array(
+		'name'          => __( 'Blog Sidebar', 'techub' ),
+		'id'            => 'blog-sidebar-1',
+		'description'   => __( 'Widgets in this area will be shown on Blog Sidebar column.', 'techub' ),
+		'before_widget' => '<div id="%1$s" class="sidebar__widget mb-30 %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="sidebar__widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_widget('Techub_Recent_Posts_Widget');
+
+	register_sidebar( array(
 		'name'          => __( 'Footer Widget 01', 'techub' ),
 		'id'            => 'footer-widget-1',
 		'description'   => __( 'Widgets in this area will be shown on footer widget 01 column.', 'techub' ),
@@ -72,9 +84,19 @@ function techub_widgets_init() {
 }
 add_action( 'widgets_init', 'techub_widgets_init' );
 
+// Add icon category widget
+function techub_icon_category_widget($args) {
+    $args['walker'] = new Techub_Category_Walker();
+    return $args;
+}
+add_filter('widget_categories_args', 'techub_icon_category_widget');
+
+
 include_once('inc/common/scripts.php');
 include_once('inc/nav-walker.php');
 include_once('inc/template-function.php');
+include_once('inc/recent-post.php');
+include_once('inc/post-sidebar-icon.php');
 
 if ( class_exists( 'Kirki' ) ) {
     include_once('inc/techubkirki.php');

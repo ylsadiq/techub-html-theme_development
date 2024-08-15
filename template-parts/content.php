@@ -1,3 +1,6 @@
+<?php if(is_single()): ?>
+    This is Single Page
+    <?php else: ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class('tp-postbox-item mb-50'); ?>>
     <?php if(has_post_thumbnail()): ?>
     <div class="tp-postbox-thumb p-relative">
@@ -20,3 +23,4 @@
         <?php echo get_template_part('template-parts/blog/button'); ?>
     </div>
 </article>
+<?php endif; ?>

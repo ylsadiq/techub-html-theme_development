@@ -1066,45 +1066,8 @@
 			rtl: rtl_setting,
 		});
 	}
-////////////////////////////////////////////////////
-	// 15. Post Gallery Js
-	const post_slider = new Swiper('.tp-post-slider', {
-		// Optional parameters
-		speed:15,
-		loop: true,
-		slidesPerView: 1,
-		autoplay: true,
-		breakpoints: {
-			'1600': {
-				slidesPerView:1,
-			},
-			'1400': {
-				slidesPerView:1,
-			},
-			'1200': {
-				slidesPerView:1,
-			},
-			'992': {
-				slidesPerView: 1,
-			},
-			'768': {
-				slidesPerView: 1,
-			},
-			'576': {
-				slidesPerView: 1,
-			},
-			'0': {
-				slidesPerView: 1,
-			},
 
-			a11y: false,
-		},
-		// Navigation arrows
-		navigation: {
-			nextEl: '.slider-next',
-			prevEl: '.slider-prev',
-		},
-	});
+
 
 	////////////////////////////////////////////////////
 	// 15. Masonary Js
@@ -1235,6 +1198,7 @@
 	tp_ecommerce();
 
 
+
 	////////////////////////////////////////////////////
 	// 17. Counter Js
 	new PureCounter();
@@ -1243,6 +1207,7 @@
 		selector: ".filesizecount",
 		pulse: 2,
 	});
+
 
 
 	////////////////////////////////////////////////////
@@ -1465,5 +1430,49 @@
 		});
 	}
 	scrollNav();
+
+
+	// 14. Swiper Js 
+	const post_slider = new Swiper('.tp-post-slider', {
+		// Optional parameters
+		speed:1500,
+		loop: true,
+		slidesPerView: 1,
+		autoplay: true,
+		breakpoints: {
+			'1600': {
+				slidesPerView:1,
+			},
+			'1400': {
+				slidesPerView:1,
+			},
+			'1200': {
+				slidesPerView:1,
+			},
+			'992': {
+				slidesPerView: 1,
+			},
+			'768': {
+				slidesPerView: 1,
+			},
+			'576': {
+				slidesPerView: 1,
+			},
+			'0': {
+				slidesPerView: 1,
+			},
+
+			a11y: false,
+		},
+		// Navigation arrows
+		navigation: {
+			nextEl: '.slider-next',
+			prevEl: '.slider-prev',
+		},
+		
+
+	});
+
+
 
 })(jQuery);
