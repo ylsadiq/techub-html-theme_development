@@ -7207,7 +7207,7 @@ body .ui-tooltip {
 
 .tagcloud a {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 14px !important;
   text-transform: capitalize;
   padding: 2px 15px;
   margin-right: 5px;
