@@ -14,3 +14,15 @@
  * License:           GNU General Public License v2.0 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  */
+
+ .rc_post-tumb img{
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+ }
+ ul li{
+    list-style: none;
+ }
+ .comment .children{
+    margin-left: 50px;
+ }
