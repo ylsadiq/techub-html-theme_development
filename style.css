@@ -26,3 +26,6 @@
  .comment .children{
     margin-left: 50px;
  }
+ .tp-portfolio-breadcrumb-body span .current-item{
+   color: #fff;
+ }

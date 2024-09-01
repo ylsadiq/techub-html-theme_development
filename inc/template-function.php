@@ -54,8 +54,7 @@ function techub_header_social()
  * @param  string $svg SVG markup to sanitize.
  * @return string 	  Sanitized markup.
  */
-function techub_kses($allow_tags = '')
-{
+function techub_kses($allow_tags = ''){
     $allowed_html = [
         'svg' => array(
             'class' => true,
